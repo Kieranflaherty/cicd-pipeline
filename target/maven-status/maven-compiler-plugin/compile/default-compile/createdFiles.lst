@@ -1,0 +1,4 @@
+com\tus\coupon\model\Coupon.class
+com\tus\coupon\controllers\CouponRestController.class
+com\tus\coupon\repos\CouponRepo.class
+com\tus\coupon\CouponserviceApplication.class
