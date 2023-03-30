@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('checkout'){
 			steps {
-				git 'https://mgiblin@bitbucket.org/cbd23/couponservice.git'
+				git 'https://github.com/Kieranflaherty/cicd-pipeline.git'
 			}
 		}
 		stage('Build'){
