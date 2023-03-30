@@ -1,11 +1,26 @@
 pipeline {
 	agent any
 	stages {
-		stage('Hello from bitbucket'){
+		stage('checkout'){
 			steps {
-				echo "Hello World!"
+				git 'https://mgiblin@bitbucket.org/cbd23/couponservice.git'
 			}
 		}
+		stage('Build'){
+			steps {
+				bat "mvn clean compile"
+			}
+		}
+		stage('test'){
+			steps {
+			 	bat "mvn test"
+			 	junit '**/target/surefire-reports/TEST-*.xml'
+			 }
+		}
+		stage('Package') {
+			steps {
+				bat "mvn package"
+			}
+		}		
 	}
-}
-				
+}			
