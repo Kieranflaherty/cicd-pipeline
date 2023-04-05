@@ -38,4 +38,11 @@ public class CouponRestController {
 		return repo.findAll();
 
 	}
+	
+	@RequestMapping(value = "/coupons/{start}/{end}", method = RequestMethod.GET)
+	public List<Coupon> getCouponsInDateRange(@PathVariable("start") String start, @PathVariable("end") String end) {
+	    return repo.findByDateRange(start, end);
+	}
 }
+
+

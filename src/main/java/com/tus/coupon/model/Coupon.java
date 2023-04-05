@@ -16,6 +16,8 @@ public class Coupon {
 	private String code;
 	private BigDecimal discount;
 	private String expDate;
+	private String startDate;
+	private String dateRange;
 
 	public String getCode() {
 		return code;
@@ -40,6 +42,14 @@ public class Coupon {
 	public void setExpDate(String expDate) {
 		this.expDate = expDate;
 	}
+	
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
 
 	public Long getId() {
 		return id;
@@ -48,5 +58,13 @@ public class Coupon {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
+//    public String getDateRange() {
+//        return dateRange;
+//    }
+//
+//    public void setDateRange(String dateRange) {
+//        this.dateRange = dateRange;
+//    }
 
 }
