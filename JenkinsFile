@@ -17,13 +17,13 @@ pipeline {
 		}
 		stage('test'){
 			steps {
-			 	bat "mvn test"
+			 	sh "mvn test"
 			 	junit '**/target/surefire-reports/TEST-*.xml'
 			 }
 		}
 		stage('Package') {
 			steps {
-				bat "mvn package"
+				sh "mvn package"
 			}
 		}		
 	}
