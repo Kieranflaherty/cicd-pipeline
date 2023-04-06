@@ -17,7 +17,8 @@ pipeline {
 		}
 		stage('test'){
 			steps {
-			 	sh(script: './mvnw --batch-mode -Dmaven.test.failure.ignore=true test')
+				sh "mvn test"
+			 	junit '**/target/surefire-reports/TEST-*.xml'
 			 }
 		}
 		stage('Package') {
