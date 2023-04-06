@@ -18,7 +18,7 @@ pipeline {
 		stage('test'){
 			steps {
 			 	sh "mvn test"
-			 	junit '**/target/*.xml'
+			 	sh(script: './mvnw --batch-mode -Dmaven.test.failure.ignore=true test')
 			 }
 		}
 		stage('Package') {
