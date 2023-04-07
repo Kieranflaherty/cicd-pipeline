@@ -24,7 +24,6 @@ pipeline {
 		stage('Checkstyle') {
 			steps {
 				sh "mvn checkstyle:checkstyle"
-				checkstyle pattern: '**/target/checkstyle-result.xml'
 			}
 		}
 		stage('SonarQube') {
