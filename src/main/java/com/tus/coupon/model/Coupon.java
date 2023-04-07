@@ -58,13 +58,5 @@ public class Coupon {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-//    public String getDateRange() {
-//        return dateRange;
-//    }
-//
-//    public void setDateRange(String dateRange) {
-//        this.dateRange = dateRange;
-//    }
 
 }
